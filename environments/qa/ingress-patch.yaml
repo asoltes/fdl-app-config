@@ -1,21 +1,3 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: file-stream-app-ingress
-  namespace: file-stream-app
-  annotations:
-    traefik.ingress.kubernetes.io/router.entrypoints: web
-    traefik.ingress.kubernetes.io/router.middlewares: file-stream-app-forward-auth@kubernetescrd
-spec:
-  ingressClassName: traefik
-  rules:
-    - host: qa.andrestrek.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: file-stream-app-service
-                port:
-                  number: 80
+- op: replace #action 
+  path: /spec/rules/0/host #resouirce we want to change
+  value: qa.andrestrek.com #value we
