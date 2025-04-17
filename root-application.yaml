@@ -87,6 +87,8 @@ spec:
         api:
           tls:
             enabled: false
+          rollouts:
+            integrationEnabled : true
           adminAccount:
             enabled: true
             passwordHash: $2y$10$hcayGGPwIu1uyiUitLpBGejcmuqX5I3XVWUl72PRLwRk2KWmh9hwu
