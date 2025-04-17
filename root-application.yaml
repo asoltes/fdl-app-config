@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: git@github.com:asoltes/fdl-app-config.git
     targetRevision: HEAD
-    path: environments                  # ← this is key
+    path: environments/dev                
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
