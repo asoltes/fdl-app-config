@@ -7,5 +7,5 @@ resources:
 namePrefix: ets-
 nameSuffix: -dev
 
-patches:
+resources:
  - ingress.yaml
