@@ -81,7 +81,7 @@ spec:
     helm:
       valuesObject:
         webhooks:
-          register: false
+          register: true
         webhooksServer:
           enabled: false
         api:
