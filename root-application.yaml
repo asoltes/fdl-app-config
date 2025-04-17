@@ -1,3 +1,5 @@
+
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -18,3 +20,45 @@ spec:
     automated:
       prune: true
       selfHeal: true
+
+
+# ---
+# apiVersion: argoproj.io/v1alpha1
+# kind: Application
+# metadata:
+#   name: kargo
+#   namespace: argocd
+# spec:
+#   project: default
+#   destination:
+#     namespace: kargo
+#     server: https://kubernetes.default.svc
+#   source:
+#     repoURL: ghcr.io/akuity/kargo-charts
+#     chart: kargo
+#     targetRevision: 1.4.2
+#     helm:
+#       parameters:
+#         - name: api.adminAccount.passwordHash
+#           # Note: A bcrypt-hashed password will contain `$` characters that
+#           # MUST each be escaped as `$$`
+#           value: $2y$10$hcayGGPwIu1uyiUitLpBGejcmuqX5I3XVWUl72PRLwRk2KWmh9hwu
+#         - name: api.adminAccount.tokenSigningKey
+#           value: XKnx3N3qNVO5HY6gOEepnzVAlWWFPeay
+#         - name: api.tls.enabled
+#           value: "false"
+#         - name : api.tls.selfSignedCert
+#           value: "false"
+#         - name: webhooksServer.tls.selfSignedCert
+#           value: "false"
+#         - name: api.oidc.dex.tls.selfSignedCert
+#           value: "false"
+#         - name: api.ingress.tls.selfSignedCert
+#           value: "false"
+
+#   syncPolicy:
+#     automated:
+#       prune: true
+#       selfHeal: true
+#     syncOptions:
+#     - CreateNamespace=true
