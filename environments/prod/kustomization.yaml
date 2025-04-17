@@ -4,7 +4,4 @@ kind: Kustomization
 resources:
   - ../../base
 
-patches:
-  - path: values-prod.yaml  # or a ConfigMapGenerator/SecretGenerator with overrides
-
 namespace: my-app-prod

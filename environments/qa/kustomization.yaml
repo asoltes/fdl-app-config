@@ -4,7 +4,4 @@ kind: Kustomization
 resources:
   - ../../base
 
-patches:
-  - path: values-qa.yaml  # or a ConfigMapGenerator/SecretGenerator with overrides
-
 namespace: my-app-qa
