@@ -11,11 +11,11 @@ spec:
               selector:
                 matchLabels:
                   environment: dev
-          - git:
-              repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
-              revision: feat/argocd
-              directories:
-                - path: charts/*
+          # - git:
+          #     repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
+          #     revision: feat/argocd
+          #     directories:
+          #       - path: charts/*
 
           - git:
               repoURL: git@github.com:asoltes/fdl-app-config.git
