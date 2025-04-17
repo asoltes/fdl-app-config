@@ -1,0 +1,9 @@
+# environments/dev/ingress-patch.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: file-stream-app-ingress
+spec:
+  rules:
+    - host: dev.andrestrek.com
+
