@@ -4,15 +4,8 @@ kind: Kustomization
 resources:
   - ../../base
 
-helmCharts:
-  - name: fdl-app
-    repo: git@github.com:asoltes/fdl-app-helm-charts.git
-    version: v3.3.0
-    releaseName: fdl-app
-    valuesFile: values-dev.yaml
-
-# patches:
-#   - path: values-dev.yaml
+patches:
+  - path: values-dev.yaml
 
 namePrefix:
   dev-
