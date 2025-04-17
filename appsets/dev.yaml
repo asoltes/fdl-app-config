@@ -23,7 +23,7 @@ spec:
       project: default
       source:
         repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
-        targetRevision: feat/argocd
+        targetRevision: HEAD
         path: "{{path}}"
         helm:
           valueFiles:
