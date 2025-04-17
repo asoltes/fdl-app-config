@@ -7,5 +7,8 @@ resources:
 namePrefix: ets-
 nameSuffix: -dev
 
-resources:
- - ingress.yaml
+patches:
+  - path: ingress-patch.yaml
+    target:
+      kind: Ingress
+      name: file-stream-app-ingress
