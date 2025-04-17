@@ -12,5 +12,5 @@ nameSuffix:
 
 
 
-resources:
+patches:
   - ingress.yaml
