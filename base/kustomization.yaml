@@ -1,0 +1,13 @@
+# kustomization.yaml
+
+# kustomization.yaml
+helmCharts:
+  - name: fdl-app
+    repo: git@github.com:asoltes/fdl-app-helm-charts.git
+    version: 0.1.0
+    releaseName: fdl-app
+    namespace: default
+    valuesFile: values.yaml  # Optional: File with custom Helm values
+
+patches:
+  - patch.yaml  # Optional: Customize resources like deployment or service

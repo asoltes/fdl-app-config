@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: fdl-root-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: git@github.com:asoltes/fdl-app-config.git
+    targetRevision: main
+    path: environments                  # ← this is key
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+    automated:
+      prune: true
+      selfHeal: true
