@@ -15,7 +15,7 @@ spec:
               repoURL: git@github.com:asoltes/fdl-app-config.git
               revision: HEAD
               directories:
-                - path: environments/*
+                - path: environments/dev
   template:
     metadata:
       name: "fdl-{{path.basename}}"

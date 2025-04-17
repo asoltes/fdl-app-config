@@ -12,24 +12,23 @@ spec:
                 matchLabels:
                   environment: prod
           - git:
-              repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
-              revision: feat/argocd
+              repoURL: git@github.com:asoltes/fdl-app-config.git
+              revision: HEAD
               directories:
-                - path: charts/*
+                - path: environments/prod
   template:
     metadata:
-      name: "prod-{{path.basename}}"
+      name: "fdl-{{path.basename}}"
     spec:
       project: default
       source:
-        repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
-        targetRevision: feat/argocd
+        repoURL: git@github.com:asoltes/fdl-app-config.git
+        targetRevision: HEAD
         path: "{{path}}"
-        helm:
-          valueFiles:
-            - values-prod.yaml
+        kustomize: {}   # 👈 Explicitly use Kustomize instead of Helm
       destination:
-        server: "{{server}}"
+        server: "{{server}}"   # From clusters generator
+        namespace: "fdl-{{path.basename}}"  # Optional: Customize per env
       syncPolicy:
         syncOptions:
           - CreateNamespace=true
