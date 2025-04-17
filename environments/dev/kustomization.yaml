@@ -16,5 +16,6 @@ helmCharts:
     version: v3.3.0
     releaseName: fdl-app
     valuesFile: values-dev.yaml
+    
 resources:
   - service.yaml

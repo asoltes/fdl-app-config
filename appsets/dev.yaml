@@ -24,7 +24,7 @@ spec:
                 - path: environments/*
   template:
     metadata:
-      name: "{{path.basename}}"
+      name: "fdl-{{path.basename}}"
     spec:
       project: default
       source:
