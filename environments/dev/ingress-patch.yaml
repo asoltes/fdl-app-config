@@ -10,3 +10,12 @@ spec:
   ingressClassName: traefik
   rules:
     - host: dev.andrestrek.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: file-stream-app-service
+                port:
+                  number: 80
