@@ -12,5 +12,5 @@ nameSuffix:
 
 
 
-patches:
+patchesStrategicMerge:
   - ingress.yaml
