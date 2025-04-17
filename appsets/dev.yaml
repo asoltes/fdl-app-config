@@ -13,9 +13,9 @@ spec:
                   environment: dev
           - git:
               repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
-              revision: HEAD
-              # directories:
-              #   - path: charts/*
+              revision: feat/argocd
+              directories:
+                - path: charts/*
   template:
     metadata:
       name: "dev-{{path.basename}}"
@@ -23,7 +23,7 @@ spec:
       project: default
       source:
         repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
-        targetRevision: HEAD
+        targetRevision: feat/argocd
         path: "{{path}}"
         helm:
           valueFiles:
