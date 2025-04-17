@@ -27,7 +27,7 @@ spec:
         path: "{{path}}"
         helm:
           valueFiles:
-            - values.yaml
+            - ../environments/prod/values-prod.yaml
       destination:
         server: "{{server}}"
       syncPolicy:
