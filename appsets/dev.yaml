@@ -27,7 +27,7 @@ spec:
         path: "{{path}}"
         helm:
           valueFiles:
-            - {{path.basename}}/environments/dev/values-dev.yaml
+            - fdl-app-config/environments/dev/values-dev.yaml
       destination:
         server: "{{server}}"
       syncPolicy:
