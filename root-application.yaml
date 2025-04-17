@@ -36,7 +36,7 @@ spec:
 #   source:
 #     repoURL: ghcr.io/akuity/kargo-charts
 #     chart: kargo
-#     targetRevision: 1.4.2
+#     targetRevision: 1.4.
 #     helm:
 #       parameters:
 #         - name: api.adminAccount.passwordHash
@@ -62,3 +62,40 @@ spec:
 #       selfHeal: true
 #     syncOptions:
 #     - CreateNamespace=true
+
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: kargo
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    namespace: kargo
+    server: https://kubernetes.default.svc
+  source:
+    repoURL: ghcr.io/akuity/kargo-charts
+    chart: kargo
+    targetRevision: 1.4.2
+    helm:
+      valuesObject:
+        webhooks:
+          register: false
+        webhooksServer:
+          enabled: false
+        api:
+          tls:
+            enabled: false
+          adminAccount:
+            enabled: true
+            passwordHash: $2y$10$hcayGGPwIu1uyiUitLpBGejcmuqX5I3XVWUl72PRLwRk2KWmh9hwu
+            tokenSigningKey: XKnx3N3qNVO5HY6gOEepnzVAlWWFPeay
+        controller:
+          logLevel: DEBUG
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+    - CreateNamespace=true
