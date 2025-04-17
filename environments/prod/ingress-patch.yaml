@@ -9,7 +9,7 @@ metadata:
 spec:
   ingressClassName: traefik
   rules:
-    - host: dev.andrestrek.com
+    - host: prod.andrestrek.com
       http:
         paths:
           - path: /
