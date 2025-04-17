@@ -7,4 +7,7 @@ resources:
 patches:
   - path: values-dev.yaml  # or a ConfigMapGenerator/SecretGenerator with overrides
 
-namespace: my-app-dev
+namePrefix:
+  dev-
+nameSuffix:
+  -ets
