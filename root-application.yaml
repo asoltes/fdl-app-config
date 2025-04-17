@@ -85,7 +85,7 @@ spec:
         webhooksServer:
           enabled: true
           tls:
-            selfSignedCert: false
+            selfSignedCert: true
         api:
           tls:
             enabled: false
