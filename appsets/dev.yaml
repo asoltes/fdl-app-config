@@ -24,7 +24,7 @@ spec:
                 - path: environments/*
   template:
     metadata:
-      name: "dev-{{path.basename}}"
+      name: "{{path.basename}}"
     spec:
       project: default
       source:
