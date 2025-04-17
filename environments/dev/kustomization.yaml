@@ -8,3 +8,8 @@ namePrefix:
   dev-
 nameSuffix:
   -ets
+
+resources:
+  - service.yaml
+  - deployment.yaml
+  - ingress.yaml
