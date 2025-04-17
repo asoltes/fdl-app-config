@@ -83,7 +83,7 @@ spec:
         webhooks:
           register: true
         webhooksServer:
-          enabled: false
+          enabled: true
         api:
           tls:
             enabled: false
