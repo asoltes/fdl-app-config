@@ -1,4 +1,4 @@
-name: fdl-app
+name: dev-fdl-app
 replicaCount: 2
 image:
   repository: asoltes/file-download-stream
