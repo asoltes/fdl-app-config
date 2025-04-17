@@ -83,9 +83,13 @@ spec:
         webhooks:
           register: true
         webhooksServer:
+          envFrom:
+            - secretRef:
+                name: kargo-webhooks-server-cert
           enabled: true
           tls:
             selfSignedCert: true
+            
         api:
           tls:
             enabled: false
