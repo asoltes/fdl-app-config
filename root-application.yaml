@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: git@github.com:asoltes/fdl-app-config.git
-    targetRevision: main
+    targetRevision: HEAD
     path: environments                  # ← this is key
   destination:
     server: https://kubernetes.default.svc
