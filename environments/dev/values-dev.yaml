@@ -23,4 +23,4 @@ service:
 
 middleware:
   forwardAuth:
-    address: https://httpbin.org/basic-auth/user/passwd
+    address: https://httpbin.org/basic-auth/dev/passwd
