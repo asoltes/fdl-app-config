@@ -16,6 +16,12 @@ spec:
               revision: feat/argocd
               directories:
                 - path: charts/*
+
+          - git:
+              repoURL: git@github.com:asoltes/fdl-app-config.git
+              revision: HEAD
+              directories:
+                - path: environments/*
   template:
     metadata:
       name: "dev-{{path.basename}}"
