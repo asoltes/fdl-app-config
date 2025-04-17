@@ -5,8 +5,7 @@ resources:
   - ../../base/charts
 
 patches:
-  - path: values-dev.yaml  # or a ConfigMapGenerator/SecretGenerator with overrides
-
+  - path: values-dev.yaml
 namePrefix:
   dev-
 nameSuffix:
