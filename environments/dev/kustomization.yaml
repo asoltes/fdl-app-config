@@ -3,13 +3,13 @@ kind: Kustomization
 
 resources:
   - ../../base
-  # - ingress-patch.yaml
+  - ingress-patch.yaml
 
 namePrefix: ets-
 nameSuffix: -dev
 
-patches:
-  - path: ingress-patch.yaml
-    target:
-      kind: Ingress
-      name: file-stream-app-ingress
+# patches:
+#   - path: ingress-patch.yaml
+#     target:
+#       kind: Ingress
+#       name: file-stream-app-ingress
