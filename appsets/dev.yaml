@@ -32,9 +32,6 @@ spec:
         targetRevision: HEAD
         path: "{{path}}"
         kustomize: {} 
-        helm:
-          valueFiles:
-            - values-dev.yaml
       destination:
         server: "{{server}}"
       syncPolicy:
