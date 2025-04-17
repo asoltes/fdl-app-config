@@ -4,5 +4,8 @@ kind: Kustomization
 resources:
   - ../../base
 
-nameSuffix: -dev
 namePrefix: ets-
+nameSuffix: -dev
+
+patches:
+ - ingress.yaml
