@@ -4,9 +4,6 @@ kind: Kustomization
 resources:
   - ../../base
 
-namePrefix: ets-
-nameSuffix: -dev
-
 patches:
   - target:
       group: networking.k8s.io
