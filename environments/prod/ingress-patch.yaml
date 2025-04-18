@@ -1,3 +1,6 @@
 - op: replace #action 
   path: /spec/rules/0/host #resouirce we want to change
-  value: prod.andreskube.com #value we
+  value: prod.andrestrek.com #value we
+
+
+

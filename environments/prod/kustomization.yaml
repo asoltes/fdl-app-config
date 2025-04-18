@@ -4,5 +4,10 @@ kind: Kustomization
 resources:
   - ../../base
 
-namePrefix: ets-
-nameSuffix: -prod
+
+patches:
+  - target:
+      group: networking.k8s.io
+      version: v1
+      kind: Ingress
+    path: ingress-patch.yaml
