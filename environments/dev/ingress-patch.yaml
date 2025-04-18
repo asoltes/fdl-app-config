@@ -1,3 +1,3 @@
-- op: replace #action 
-  path: /spec/rules/0/host #resouirce we want to change
-  value: dev.kube.com #value we want to use for patching 
+- op: replace
+  path: /spec/rules/0/host
+  value: dev.kube.com 

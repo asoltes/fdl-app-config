@@ -7,7 +7,9 @@ resources:
 namePrefix: ets-
 nameSuffix: -dev
 
-patches:
-  - path: ingress-patch.yaml
-    target:
+patchesJson6902:
+  - target:
+      group: networking.k8s.io
+      version: v1
       kind: Ingress
+    path: ingress-patch.yaml
