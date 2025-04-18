@@ -10,7 +10,7 @@ spec:
           - clusters:
               selector:
                 matchLabels:
-                  environment: dev
+                  environment: prod
           - git:
               repoURL: git@github.com:asoltes/fdl-app-config.git
               revision: HEAD

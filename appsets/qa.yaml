@@ -10,7 +10,7 @@ spec:
           - clusters:
               selector:
                 matchLabels:
-                  environment: dev
+                  environment: qa
           - git:
               repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
               revision: feat/argocd
