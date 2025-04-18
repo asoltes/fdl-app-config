@@ -93,7 +93,7 @@ spec:
         api:
           host: kargo.andrestrek.com
           ingress:
-            enabled: true
+            enabled: false
           tls:
             enabled: true
           rollouts:
