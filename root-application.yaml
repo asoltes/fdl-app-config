@@ -83,16 +83,19 @@ spec:
         webhooks:
           register: true
         webhooksServer:
-          envFrom:
-            - secretRef:
-                name: kargo-webhooks-server-cert
+          # envFrom:
+          #   - secretRef:
+          #       name: kargo-webhooks-server-cert
           enabled: true
           tls:
             selfSignedCert: true
             
         api:
+          host: kargo.andrestrek.com
+          ingress:
+            enabled: true
           tls:
-            enabled: false
+            enabled: true
           rollouts:
             integrationEnabled : true
           adminAccount:
