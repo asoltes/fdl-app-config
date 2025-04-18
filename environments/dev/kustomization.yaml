@@ -4,8 +4,8 @@ kind: Kustomization
 resources:
   - ../../base
 
-namePrefix: ets-
-nameSuffix: -dev
+# namePrefix: ets-
+# nameSuffix: -dev
 
 patches:
   - target:
