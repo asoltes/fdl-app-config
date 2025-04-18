@@ -9,9 +9,7 @@ namePrefix: ets-
 nameSuffix: -dev
 
 patches:
-  - target:
-        group: networking.k8s.io
-        version: v1
-        kind: Ingress
-    path: ingress-patch.yaml
-
+  - path: ingress-patch.yaml
+    target:
+      kind: Ingress
+      name: file-stream-app-ingress
