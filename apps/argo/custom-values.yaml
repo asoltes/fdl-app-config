@@ -1,0 +1,16 @@
+global:
+  domain: argo.andrestrek.com
+
+configs:
+  params:
+    server.insecure: true
+    server.enable.proxy.extension: true
+
+server:
+  ingress:
+    enabled: true
+    annotations:
+      ingressClassName: nginx
+      alb.ingress.kubernetes.io/ssl-passthrough: "true"
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+      nginx.ingress.kubernetes.io/backend-protocol: "HTTP"
