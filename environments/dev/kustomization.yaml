@@ -13,6 +13,5 @@ patches:
         group: networking.k8s.io
         version: v1
         kind: Ingress
-        name: file-stream-app-ingress
     path: ingress-patch.yaml
 
