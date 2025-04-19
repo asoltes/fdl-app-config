@@ -24,7 +24,6 @@ spec:
       sources:
         - repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
           targetRevision: HEAD
-          # path: charts/{{path.basename}}
           helm:
             valueFiles:
               - $values/environments/dev/values-dev.yaml
