@@ -18,7 +18,7 @@ spec:
                 - path: charts/fdl
   template:
     metadata:
-      name: "fdl-{{path.basename}}"
+      name: "dev-{{path.basename}}"
     spec:
       project: default
       sources:
