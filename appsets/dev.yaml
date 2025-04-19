@@ -24,7 +24,7 @@ spec:
       sources:
         - repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
           targetRevision: feat/argocd
-          path: charts/fdl
+          path: fdl
           helm:
             valueFiles:
               - $values/dev/values-dev.yaml
@@ -35,8 +35,8 @@ spec:
           ref: values
 
       destination:
-        server: "{{server}}"   # From clusters generator
-        namespace: "dev-{{path.basename}}"  # Optional: Customize per env
+        server: "{{server}}"
+        namespace: "dev-{{path.basename}}"
       syncPolicy:
         syncOptions:
           - CreateNamespace=true
