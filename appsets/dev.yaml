@@ -12,20 +12,28 @@ spec:
                 matchLabels:
                   environment: dev
           - git:
-              repoURL: git@github.com:asoltes/fdl-app-config.git
+              repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
               revision: HEAD
               directories:
-                - path: environments/dev
+                - path: charts/*
   template:
     metadata:
       name: "fdl-{{path.basename}}"
     spec:
       project: default
-      source:
-        repoURL: git@github.com:asoltes/fdl-app-config.git
-        targetRevision: HEAD
-        path: "{{path}}"
-        kustomize: {}   # 👈 Explicitly use Kustomize instead of Helm
+      sources:
+        - repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
+          targetRevision: HEAD
+          path: charts/*
+          helm:
+            valueFiles:
+              - values/*/values-dev.yaml
+
+        
+        - repoURL: git@github.com:asoltes/fdl-app-config.git
+          targetRevision: HEAD
+          ref: values
+
       destination:
         server: "{{server}}"   # From clusters generator
         namespace: "fdl-{{path.basename}}"  # Optional: Customize per env
