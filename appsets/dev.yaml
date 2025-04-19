@@ -15,8 +15,7 @@ spec:
               repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
               revision: feat/argocd
               directories:
-                - path: charts/fdl
-                - path: charts/fdl-copy
+                - path: charts/{{path.basename}}
   template:
     metadata:
       name: "dev-{{path.basename}}-random"
