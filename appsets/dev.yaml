@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: test-fdl-appset
+  name: dev-fdl-appset
   namespace: argocd
 spec:
   generators:
