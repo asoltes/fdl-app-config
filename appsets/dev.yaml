@@ -32,7 +32,7 @@ spec:
         - repoURL: git@github.com:asoltes/fdl-app-config.git
           targetRevision: HEAD
           path: environments/dev
-          ref: $values
+          ref: values
 
       destination:
         server: "{{server}}"   # From clusters generator
