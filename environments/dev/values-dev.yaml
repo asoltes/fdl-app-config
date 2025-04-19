@@ -1,4 +1,4 @@
-name: wtf-app
+name: dev-andres-fdl-app
 
 replicaCount: 2
 
@@ -7,7 +7,7 @@ image:
   tag: v3.3.0
   pullPolicy: Always
 
-namespace: wtf-app
+namespace: dev-andres-app
 awsSecretName: aws-credentials
 
 ingress:
