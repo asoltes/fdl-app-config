@@ -30,7 +30,7 @@ spec:
               - $values/dev/values-dev.yaml
 
         - repoURL: git@github.com:asoltes/fdl-app-config.git
-          targetRevision: HEAD
+          targetRevision: v3.3.0
           path: environments/dev
           ref: values
 
