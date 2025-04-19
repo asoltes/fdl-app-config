@@ -18,7 +18,7 @@ spec:
                 - path: charts/{{path.basename}}
   template:
     metadata:
-      name: "{{path.basename}}"
+      name: "dev-{{path.basename}}"
     spec:
       project: default
       sources:
