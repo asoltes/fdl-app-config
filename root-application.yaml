@@ -9,7 +9,7 @@ spec:
   project: default
   source:
     repoURL: git@github.com:asoltes/fdl-app-config.git
-    targetRevision: HEAD
+    targetRevision: feat/ext-values-helm
     path: appsets                
   destination:
     server: https://kubernetes.default.svc
