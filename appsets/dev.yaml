@@ -25,7 +25,7 @@ spec:
       sources:
         - repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
           targetRevision: feat/argocd
-          path: charts/*
+          path: charts/{{path.basename}}
           helm:
             valueFiles:
               - $values/environments/dev/values-dev.yaml
