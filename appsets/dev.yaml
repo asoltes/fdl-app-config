@@ -27,7 +27,7 @@ spec:
           path: charts/fdl
           helm:
             valueFiles:
-              - $values/dev/values-dev.yaml
+              - $values/environments/dev/values-dev.yaml
 
         - repoURL: git@github.com:asoltes/fdl-app-config.git
           targetRevision: HEAD
