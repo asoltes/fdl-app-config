@@ -13,7 +13,7 @@ spec:
                   environment: dev
           - git:
               repoURL: git@github.com:asoltes/fdl-app-helm-charts.git
-              revision: HEAD
+              revision: feat/argocd
               directories:
                 - path: charts/*
   template:
@@ -29,7 +29,6 @@ spec:
             valueFiles:
               - $values/dev/values-dev.yaml
 
-        
         - repoURL: git@github.com:asoltes/fdl-app-config.git
           targetRevision: HEAD
           ref: values
